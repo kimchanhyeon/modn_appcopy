@@ -45,27 +45,27 @@ export class CatalogProvider {
     let body = JSON.stringify(product);
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers});
-    return this.httpService.create(this.url.catalog, body, options);
+    return this.httpProvider.create(this.url.catalog, body, options);
   }
   
   list():Observable<Array<Product>>{
     let params = JSON.stringify({});
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers, body:params});
-    return this.httpService.list(this.url.catalog, options);
+    return this.httpProvider.list(this.url.catalog, options);
   }
   
   update(product:Product):Observable<Product>{
     let body = JSON.stringify(product);
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers});
-    return this.httpService.update(this.url.catalog, body, options);
+    return this.httpProvider.update(this.url.catalog, body, options);
   }
   retrieve(id:number):Observable<Product>{
     let params = JSON.stringify({});
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers, body:params});
-    return this.httpService.retrieve(this.url.catalog+'/'+id, options);
+    return this.httpProvider.retrieve(this.url.catalog+'/'+id, options);
   }
   /*
   remove(id:number):Observable<Product>{

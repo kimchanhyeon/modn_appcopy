@@ -30,6 +30,7 @@ export class Product{
 
 export class Sku{
     private id:number;
+    public sku_attribute:Array<SkuAttribute>;
     public description:String;
     //commission_type:String;
     public retail_price:number;
@@ -37,6 +38,13 @@ export class Sku{
     public date_created:Date;
     public date_updated:Date;
 
+}
+
+export class SkuAttribute{
+    private id:number;
+    public order:number;
+    public attribute_name:string;
+    public attribute_value:string;
 }
 
 class Media{

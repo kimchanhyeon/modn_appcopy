@@ -12,14 +12,14 @@ import 'rxjs/add/operator/map';
 export class URL {
   /*
    * URL's endpoints 
-   * justfly is a variable for services URL
+   * modn is a variable for services URL
    * rest of all values for endpoints 
    */
 
   /* 
-   * URL for justfly
+   * URL for modn
    */
-  public justfly:string = "http://localhost:8080/";
+  public modn:string = "http://localhost:8080/";
   
   /*
    * URL for Authentication
