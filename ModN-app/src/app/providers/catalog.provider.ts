@@ -30,17 +30,19 @@ import {HttpProvider} from './common/http.provider';
 */
 @Injectable()
 export class CatalogProvider {
+  html = "http://mitem.gmarket.co.kr/Item?goodsCode=904107371";
   private products:Array<Product> = [];
   private skus:Array<Sku> = [];
   constructor(
     public url: URL,
     public httpProvider: HttpProvider
     ) {
-    console.log('Hello CatalogService Provider');
+    console.log('Hello Catalog Provider');
   }
   /*
    * Method for Products
    */
+  /*
   create(product:Product):Observable<Product>{
     let body = JSON.stringify(product);
     let headers = new Headers({'Content-Type':'application/json'});
@@ -81,34 +83,39 @@ export class CatalogProvider {
   setProducts(products:Array<Product>){
     this.products = products;
   }
-
+  
   /*
    * Method for Skus
    */
+  /*
   createSku(id:number, sku:Sku):Observable<Sku>{
     let body = JSON.stringify(sku);
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers});
-    return this.httpService.create(this.url.catalog+'/'+id+'/skus', body, options);
+    return this.httpProvider.create(this.url.catalog+'/'+id+'/skus', body, options);
   }
   
   listSku():Observable<Array<Sku>>{
     let params = JSON.stringify({});
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers, body:params});
-    return this.httpService.list(this.url.catalog, options);
+    return this.httpProvider.list(this.url.catalog, options);
   }
   
   updateSku(product:Product):Observable<Product>{
     let body = JSON.stringify(product);
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new RequestOptions({headers:headers});
-    return this.httpService.update(this.url.catalog, body, options);
+    return this.httpProvider.update(this.url.catalog, body, options);
   }
+  */
   getSkus():Array<Sku>{
     return this.skus;
   }
   setSkus(skus:Array<Sku>){
       this.skus = skus;
+  }
+  getOptions(html:string){
+
   }
 }

@@ -19,7 +19,7 @@ import { URL } from './url.data';
 export class HttpProvider{
     constructor(
         public url:URL,
-        public http: HttpProvider
+        public http: Http
     ) {
         console.log('Hello Http Provider');
     }

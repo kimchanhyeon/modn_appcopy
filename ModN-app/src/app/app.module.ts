@@ -34,7 +34,8 @@ import { ProductPage } from '../pages/product/product';
 /*
  * Components 
  */
-
+import { ProductView } from './components/product-view/product-view';
+import { ProductForm } from './components/product-form/product-form';
 /*
  * Providers 
  */
@@ -56,8 +57,10 @@ let pages = [
   CartPage,
   FavoritesPage,
   UserPage,
-  ProductPage
+  ProductPage,
   //Components
+  ProductView,
+  ProductForm
 ]
 
 export function declarations() {

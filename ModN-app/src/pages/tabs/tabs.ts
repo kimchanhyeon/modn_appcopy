@@ -19,7 +19,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = CartPage;
   tab3Root = FavoritesPage;
-  tab4Root = UserPage;
+  //tab4Root = UserPage;
   constructor() {
 
   }
